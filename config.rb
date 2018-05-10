@@ -78,6 +78,12 @@ configure :build do
   activate :build_cleaner
 end
 
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "blog"
+  blog.permalink = "blog/{year}/{title}.html"
+end
+
 # Deployment
 activate :deploy do |deploy|
   deploy.method = :git
